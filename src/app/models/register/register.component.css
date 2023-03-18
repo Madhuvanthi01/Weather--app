@@ -1,0 +1,11 @@
+.register-block{
+    float:left;
+    width:100%;
+    padding : 50px 0;
+}
+
+.container{background:#D3D3D3; border-radius: 10px; width: 40%; height: 40%;}
+.register-sec{padding: 50px 30px; position:relative;margin-top: 20px;}
+.register-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #047cbb;}
+.register-sec h2:after{content:" "; width:100px; height:5px; background:#047cbb; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto; margin-bottom: 20px;}
+.btn-login{background: #047cbb; color:#fff; font-weight:600; margin-top: 20px;}

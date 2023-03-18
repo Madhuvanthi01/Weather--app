@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+<br><br>
+<div class="search">
+    <form #form="ngForm" (submit)="onsubmit()" >
+        <input type="text" placeholder="Search city" name="city" [(ngModel)]="cityname">
+    </form>
+</div>
+<div class="container" *ngIf="weatherdata">
+    <div class="upperdata">
+        <img src="../assets/sun.jpg" *ngIf="weatherdata.current.temp_c>15">
+        <img src="../assets/moon.jpg" *ngIf="weatherdata.current.temp_c<=15">
+        <div class="weather-data"> 
+            <div class="location">{{weatherdata.location.name}}</div>
+            <div class="temperature">{{weatherdata.current.temp_c|number:'1.0-0' }}°C</div>
+        </div>
+    </div>
+    <div class="lowerdata">
+
+
+        <div class="more-info-lable">
+            Know more...
+         </div>
+         <div class="more-info-container">
+       
+
+
+<div class="info-block">
+    <div class="info-block-lable">
+        <img src="../assets/temp.png" alt="">
+        <span>Maximum</span>
+
+</div>
+<div class="info-block-value">
+    {{weatherdata.current.temp_f}}°C
+</div>
+</div>
+
+<div class="info-block">
+    <div class="info-block-lable">
+        <img src="../assets/windmill.png" alt="">
+        <span>Wind</span>
+
+</div>
+<div class="info-block-value">
+    {{weatherdata.current.wind_kph
+    }}km/hr
+</div>
+</div>
+
+
+    <div class="info-block">
+        <div class="info-block-lable">
+            <img src="../assets/latitude.png" alt="">
+            <span >Latitude</span>
+
+    </div>
+    <div class="info-block-value">
+        {{weatherdata.location.lat|number:'1.0-0' }}°
+    </div>
+</div>
+
+
+<div class="info-block">
+    <div class="info-block-lable">
+        <img src="../assets/longitude.png" alt="">
+        <span>Longitude</span>
+
+</div>
+<div class="info-block-value">
+    {{weatherdata.location.lon|number:'1.0-0' }}°
+</div>
+
+
+</div>
+
+         </div>
+    
+    </div>
+</div>
+
+
+   
